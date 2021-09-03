@@ -1,10 +1,18 @@
+cargo-features = ["strip"]
+
 [package]
 name = "tdtxt-cli"
 version = "0.1.0"
+authors = ["Shemnei"]
 edition = "2021"
-
-[lib]
-name = "tdtxt_cli"
+description = "A terminal client for the todo.txt format"
+documentation = "https://github.com/Shemnei/tdtxt-cli"
+homepage = "https://github.com/Shemnei/tdtxt-cli"
+repository = "https://github.com/Shemnei/tdtxt-cli"
+license = "Unlicense"
+include = ["src/", "LICENSE", "README.md", "CHANGELOG.md"]
+keywords = ["todotxt", "todo", "todo-txt", "cli"]
+categories = ["command-line-utilities"]
 
 [[bin]]
 name = "tdtxt"
@@ -15,3 +23,14 @@ clap = { version = "3.0.0-beta.4", features = ["derive"] }
 platform-dirs = "0.3.0"
 tdtxt = { git = "https://github.com/Shemnei/tdtxt" }
 yansi = "0.5.0"
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+lto = "thin"
+opt-level = 3
+# Strip symbols for the release build to decrease binary size
+strip = true
+# Reduces parallel code generation units to increase optimizations
+codegen-units = 1
