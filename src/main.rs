@@ -1,3 +1,4 @@
+
 fn main() {
-	println!("Hello World");
+	tdtxt_cli::entry_point();
 }

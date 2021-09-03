@@ -28,3 +28,11 @@
 	clippy::use_self
 )]
 #![cfg_attr(docsrs, feature(doc_cfg), feature(doc_alias))]
+
+use clap::Clap;
+
+mod opt;
+
+pub fn entry_point() {
+	let opts = opt::Opts::parse();
+}

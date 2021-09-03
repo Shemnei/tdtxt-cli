@@ -7,7 +7,7 @@ edition = "2021"
 name = "tdtxt_cli"
 
 [[bin]]
-name = "td"
+name = "tdtxt"
 path = "src/main.rs"
 
 [dependencies]
