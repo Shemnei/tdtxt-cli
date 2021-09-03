@@ -1,0 +1,17 @@
+[package]
+name = "tdtxt-cli"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "tdtxt_cli"
+
+[[bin]]
+name = "td"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "3.0.0-beta.4", features = ["derive"] }
+platform-dirs = "0.3.0"
+tdtxt = { git = "https://github.com/Shemnei/tdtxt" }
+yansi = "0.5.0"
