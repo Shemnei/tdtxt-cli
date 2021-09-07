@@ -175,8 +175,9 @@ dependencies = [
 
 [[package]]
 name = "tdtxt"
-version = "0.2.0"
-source = "git+https://github.com/Shemnei/tdtxt?branch=main#8924c59061b0a226b0590d5db9ceb36bf07ec167"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6fe23fc1d75589e34fdb599e390c2967d53bb6cee3c653ba15af6a528c9c7b16"
 
 [[package]]
 name = "tdtxt-cli"
