@@ -1,19 +1,9 @@
-# Rust project template
+# tdtxt-cli
 
-## Setup (Clone)
+This project for now only serves as an example what can be done with the
+[`todo.txt`](https://github.com/todotxt/todo.txt) parsing library
+[`tdtxt`](https://github.com/Shemnei/tdtxt).
 
-1) Reset the repository
+## Screenshots
 
-```bash
-rm -rf .git
-git init
-```
-2) Init cargo project
-
-```bash
-cargo init --lib
-# OR
-cargo init --bin
-```
-
-3) If it is a binary, create `src/main.rs`
+![Screenshot of list command](.github/assets/screenshot.png)
