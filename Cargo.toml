@@ -19,10 +19,10 @@ name = "tdtxt"
 path = "src/main.rs"
 
 [dependencies]
+anyhow = "1.0.43"
 clap = { version = "3.0.0-beta.4", features = ["derive"] }
-platform-dirs = "0.3.0"
 # TODO: update to crates.io when new version is published
-tdtxt = { git = "https://github.com/Shemnei/tdtxt" }
+tdtxt = { git = "https://github.com/Shemnei/tdtxt", branch = "main" }
 yansi = "0.5.0"
 
 [profile.dev]
