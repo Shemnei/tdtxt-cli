@@ -5,7 +5,7 @@ use std::path::Path;
 use std::str::FromStr;
 
 use anyhow::Context;
-use tdtxt::{ParseTaskError, Task};
+use tdtxt::Task;
 
 pub struct TaskIter {
 	lines: Enumerate<Lines<BufReader<File>>>,

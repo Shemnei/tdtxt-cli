@@ -37,7 +37,7 @@ use std::path::PathBuf;
 use clap::{crate_authors, crate_description, crate_version, Clap};
 use task::TaskIter;
 use tdtxt::{Component, Priority, Task};
-use yansi::{Color, Paint, Style};
+use yansi::{Color, Paint};
 
 #[derive(Debug, Clone, Clap)]
 #[clap(name = "tdtxt", version = crate_version!(), author = crate_authors!(), about = crate_description!())]
@@ -69,7 +69,7 @@ fn main() -> anyhow::Result<()> {
 
 				let task_str = match task {
 					Ok(task) => task_fmt(&task),
-					Err(err) => err.to_string(),
+					Err(err) => err_fmt(err),
 				};
 
 				println!("{}# {}", line_nr_str, task_str);
